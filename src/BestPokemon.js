@@ -1,7 +1,7 @@
 import React from 'react'
 
 const BestPokemon = (props) => {
-    console.log(props)
+    
   //const abilities = ['Anticipation', 'Adaptability', 'Run-Away']
   return (
     <div>

@@ -5,9 +5,16 @@ import BestPokemon from "./BestPokemon";
 
 
 const App = () => {
+
+  const logWhenClicked = () => {
+      console.log("Hello, What day is today");
+    }
+
+    
+
   return (
     <div>
-     <Logo appName = "Jasvir's" />
+     <Logo handleClick={logWhenClicked} appName = "Jasvir's" />
      <BestPokemon abilities = {['Anticipation', 'Adaptability', 'Run-Away']} favourite = "Squirtle"/>
      <CaughtPokemon date = {new Date()} counter = {12} />
     </div>
