@@ -6,11 +6,7 @@ const CaughtPokemon = (props) => {
   const [pokemonNameInput, setPokemonNameInput] = useState("");
 
   function handleInputChange(event){
-    if(event.target.value === ""){
-       setPokemonNameInput("");
-    } else {
-      setPokemonNameInput(event.target.value);
-    }
+      setPokemonNameInput(event.target.value);    
   }
 
   function catchPokemon(){
@@ -28,8 +24,10 @@ const CaughtPokemon = (props) => {
 //     "Metapod",
 //     "Butterfree"
 // ];
-    setCaught(caught.concat(pokemonNameInput)) 
-     setPokemonNameInput("")
+    if (pokemonNameInput){
+       setCaught(caught => caught.concat(pokemonNameInput))
+       setPokemonNameInput("")
+    }     
   }
 // {/*caught.concat(pokemons[Math.floor(Math.random() * pokemons.length)])*/}
   return (
